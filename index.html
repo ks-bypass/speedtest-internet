@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07111f">
+  <title>SPEEDTEST INDONESIA — Tes Kecepatan Internet</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<video class="background-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+  <source src="background.mp4" type="video/mp4">
+</video>
+<div class="video-overlay" aria-hidden="true"></div>
+<header class="topbar">
+  <a class="brand" href="index.html"><span class="brand-mark">S</span><span>SPEEDTEST <b>INDONESIA</b><small>Ukur. Bandingkan. Pilih WiFi.</small></span></a>
+</header>
+<main class="container">
+  <section class="hero">
+    <div class="eyebrow"><span class="live-dot"></span> INTERNET PERFORMANCE CHECK</div>
+    <h1>Seberapa cepat <span>internetmu?</span></h1>
+    <p class="muted">Uji koneksi saat ini, lalu dapatkan saran paket internet dan perangkat WiFi sesuai kebutuhan rumahmu.</p>
+  </section>
+
+  <section class="test-card">
+    <div class="test-head"><span>TES KECEPATAN INTERNET</span><span class="secure">● Pengujian melalui Cloudflare</span></div>
+    <div class="gauge-wrap"><div class="gauge"><div class="gauge-inner">
+      <div id="phase" class="phase">SIAP TES</div>
+      <div id="speed" class="speed">—<small>Mbps</small></div>
+      <button id="startBtn" class="start-btn">MULAI TES</button>
+    </div></div></div>
+    <p id="status" class="status" aria-live="polite">Tekan tombol untuk mulai menguji koneksi.</p>
+    <div class="metrics">
+      <div class="metric"><span>↓ DOWNLOAD</span><strong id="download">— <small>Mbps</small></strong></div>
+      <div class="metric"><span>↑ UPLOAD</span><strong id="upload">— <small>Mbps</small></strong></div>
+      <div class="metric"><span>◉ PING</span><strong id="ping">— <small>ms</small></strong></div>
+      <div class="metric"><span>⌁ JITTER*</span><strong id="jitter">— <small>ms</small></strong></div>
+    </div>
+    <p class="tiny">*Jitter adalah variasi waktu respons. Tes memakai data sekitar 7 MB. Hasil dipengaruhi server, sinyal, perangkat, dan kondisi jaringan saat tes.</p>
+  </section>
+
+  <section class="panel needs">
+    <div class="panel-title">🏠 KEBUTUHAN INTERNET RUMAH</div>
+    <div class="form-grid">
+      <label>Berapa perangkat biasanya terhubung?
+        <select id="devices"><option value="1">1–3 perangkat</option><option value="2" selected>4–7 perangkat</option><option value="3">8–12 perangkat</option><option value="4">Lebih dari 12 perangkat</option></select>
+      </label>
+      <label>Aktivitas utama
+        <select id="usage"><option value="basic">Chat, browsing, belajar online</option><option value="stream" selected>Streaming HD / video call</option><option value="heavy">Gaming, banyak streaming, kerja berat</option><option value="4k">Streaming 4K dan banyak perangkat</option></select>
+      </label>
+      <label>Luas rumah (perkiraan)
+        <select id="house"><option value="small">Kecil / 1 lantai</option><option value="medium" selected>Sedang / 1 lantai</option><option value="large">Besar atau 2 lantai</option></select>
+      </label>
+    </div>
+    <p class="tiny">Pilihan ini dipakai untuk menyesuaikan saran kapasitas paket dan perangkat WiFi. Tidak ada data lokasi atau IP yang dikirim ke pemilik website.</p>
+  </section>
+
+  <section class="panel suggestion">
+    <div class="panel-title">💡 SARAN INTERNET & WIFI UNTUKMU</div>
+    <div id="recommendation" class="recommendation">Jalankan tes kecepatan dan pilih kebutuhan rumah untuk melihat saran yang sesuai hasil koneksi saat ini.</div>
+    <div id="routerAdvice" class="router-advice"></div>
+    <p class="tiny">Saran ini adalah perkiraan berdasarkan hasil tes dan pilihan kebutuhan. Website tidak dapat memastikan cakupan atau gangguan ISP di alamat rumahmu. Periksa ketersediaan dan harga langsung kepada penyedia.</p>
+  </section>
+
+  <section class="panel providers">
+    <div class="panel-title">PENYEDIA INTERNET DI INDONESIA</div>
+    <p class="muted small">Cek cakupan, harga, FUP, biaya pemasangan, dan syarat terbaru pada situs resmi masing-masing penyedia.</p>
+    <div class="provider-grid">
+      <a href="https://indihome.co.id/" target="_blank" rel="noopener">IndiHome <span>Situs resmi ↗</span></a>
+      <a href="https://biznethome.net/" target="_blank" rel="noopener">Biznet Home <span>Situs resmi ↗</span></a>
+      <a href="https://myrepublic.co.id/" target="_blank" rel="noopener">MyRepublic <span>Situs resmi ↗</span></a>
+      <a href="https://www.firstmedia.com/" target="_blank" rel="noopener">First Media <span>Situs resmi ↗</span></a>
+      <a href="https://iconnet.id/" target="_blank" rel="noopener">ICONNET <span>Situs resmi ↗</span></a>
+      <a href="https://oxygen.id/" target="_blank" rel="noopener">Oxygen <span>Situs resmi ↗</span></a>
+    </div>
+  </section>
+  <footer>© <span id="year"></span> SPEEDTEST INDONESIA · Tidak mengumpulkan IP atau lokasi pengunjung.</footer>
+</main>
+<script src="app.js"></script>
+</body></html>
